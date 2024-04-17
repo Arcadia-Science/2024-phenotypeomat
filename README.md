@@ -4,9 +4,9 @@
 
 ## Purpose
 
-This repository contains the analysis code to create the data driven components of the figures in our pub [The phenotype-o-mat: A flexible tool for collecting visual phenotypes](LINK_TO_PUB)
-These scripts are intended to provide exampls of how an experimentor might analyze data collected on the Phenotype-o-mat.
-A comprehensive protocol for assembling a Phenotype-o-mat is available [here](https://www.protocols.io/view/building-a-phenotype-o-mat-a-low-cost-diy-plate-re-yxmvm3r3ol3p/v1)
+This repository contains the analysis code to create the data driven components of the figures in our pub [The phenotype-o-mat: A flexible tool for collecting visual phenotypes](LINK_TO_PUB)<br>
+These scripts are intended to provide exampls of how an experimentor might analyze data collected on the Phenotype-o-mat.<br>
+A comprehensive protocol for assembling a Phenotype-o-mat is available [here](https://www.protocols.io/view/building-a-phenotype-o-mat-a-low-cost-diy-plate-re-yxmvm3r3ol3p/v1)<br>
 
 ## Installation and Setup
 
@@ -31,12 +31,12 @@ The data analyzed for the pub are available [here](PATH TO ZENODO LIB)
 
 ### Description of the folder structure
 
-The analysis scripts are located in the `data_analysis_scripts` folder. 
+The analysis scripts are located in the `data_analysis_scripts` folder.<br>
 The dev.yml file defines the conda envionrment to run the scripts and is contained in the `env` folder.
 
 ### Methods
 
-These two scripts analyze and plot two types of data collected using the phenotypeomat: chlorophyll fluorescence data and multi-wavelength reflectance data. 
+These two scripts analyze and plot two types of data collected using the phenotypeomat: chlorophyll fluorescence data and multi-wavelength reflectance data.<br>
 Each script starts by taking a single image (flurescence or transillumination) and identifying colony location and shape. These segmentations are then used to collect the remaining intensity data (fluorescence or reflectance) and plot that data. The details of those plots can be seen in the pub or by running the scripts.
 
 ### Compute Specifications
