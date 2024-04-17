@@ -2,11 +2,14 @@ name: phenotypeomat
 channels:
   - defaults
 dependencies:
-  - opencv
+  - pip=23.31
+  - pre-commit=3.4.0
+  - ruff=0.3.0
+  - opencv=4.6.0
   - pyserial=3.5
-  - matplotlib
-  - scipy
-  - scikit-image
-  - numpy
-  - seaborn
-prefix: /home/dmets/miniconda3/envs/phenotypeomat
+  - matplotlib=3.8.0
+  - scipy=1.11.4
+  - scikit-image=0.19.3
+  - numpy=1.12.6
+  - seaborn=0.12.2
+
