@@ -31,12 +31,12 @@ The data analyzed for the pub are available [here](PATH TO ZENODO LIB)
 
 ### Description of the folder structure
 
-The analysis scripts are located in the `data_analysis_scripts` folder.
+The analysis scripts are located in the `data_analysis_scripts` folder. 
 The dev.yml file defines the conda envionrment to run the scripts and is contained in the `env` folder.
 
 ### Methods
 
-These two scripts analyze and plot two types of data collected using the phenotypeomat: chlorophyll fluorescence data and multi-wavelength reflectance data.
+These two scripts analyze and plot two types of data collected using the phenotypeomat: chlorophyll fluorescence data and multi-wavelength reflectance data. 
 Each script starts by taking a single image (flurescence or transillumination) and identifying colony location and shape. These segmentations are then used to collect the remaining intensity data (fluorescence or reflectance) and plot that data. The details of those plots can be seen in the pub or by running the scripts.
 
 ### Compute Specifications
