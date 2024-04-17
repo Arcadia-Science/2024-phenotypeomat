@@ -19,8 +19,8 @@ It then plots the mean intensity for each of the species over time.
 The script expects the .AVI video and the .TIFF to be in the same folder.
 
 Usage:
-Python3 colony_segment_figure_chr_fl_fig.py [PATH TO SINGLE C. REINHARDTII TIFF]
-[PATH TO SINGLE C. SMITHII TIFF]"""
+python3 colony_segment_figure_chr_fl_fig.py [PATH TO SINGLE C. REINHARDTII TIFF] \
+    [PATH TO SINGLE C. SMITHII TIFF]"""
 
 
 # helper functions
@@ -97,7 +97,6 @@ def get_foreground(image):
     return out
 
 
-# main
 # import images
 if len(sys.argv) > 2:
     rein_image_path = sys.argv[1]
