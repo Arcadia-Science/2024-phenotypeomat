@@ -31,7 +31,7 @@ The data analyzed for the pub are available [here](PATH TO ZENODO LIB)
 
 ### Description of the folder structure
 
-The analysis scripts are located in the `data_analysis_scripts` folder.<br>
+The analysis scripts are located in the [`data_analysis_scripts`](./data_analysis_scripts) folder.<br>
 The dev.yml file defines the conda envionrment to run the scripts and is contained in the `env` folder.
 
 ### Methods
