@@ -5,7 +5,7 @@
 ## Purpose
 
 This repository contains the analysis code to create the data driven components of the figures in our pub [The phenotype-o-mat: A flexible tool for collecting visual phenotypes](LINK_TO_PUB)<br>
-These scripts are intended to provide exampls of how an experimentor might analyze data collected on the Phenotype-o-mat.<br>
+These scripts are intended to provide examples of how an experimenter might analyze data collected on the Phenotype-o-mat.<br>
 A comprehensive protocol for assembling a Phenotype-o-mat is available [here](https://www.protocols.io/view/building-a-phenotype-o-mat-a-low-cost-diy-plate-re-yxmvm3r3ol3p/v1)<br>
 
 ## Installation and Setup
