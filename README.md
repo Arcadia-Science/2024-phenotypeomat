@@ -25,7 +25,7 @@ After setting up the conda environment, the analyses can be run as follows:
 
 ## Data
 
-The data analyzed for the pub are available [here](PATH TO ZENODO LIB)
+The data analyzed for the pub are available [here](https://zenodo.org/records/11043291)
 
 ## Overview
 
@@ -36,7 +36,7 @@ The dev.yml file defines the conda envionrment to run the scripts and is contain
 
 ### Methods
 
-These two scripts analyze and plot two types of data collected using the phenotypeomat: chlorophyll fluorescence data and multi-wavelength reflectance data.<br>
+These two scripts analyze and plot two types of data collected using the phenotype-o-mat: chlorophyll fluorescence data and multi-wavelength reflectance data.<br>
 Each script starts by taking a single image (flurescence or transillumination) and identifying colony location and shape. These segmentations are then used to collect the remaining intensity data (fluorescence or reflectance) and plot that data. The details of those plots can be seen in the pub or by running the scripts.
 
 ### Compute Specifications
