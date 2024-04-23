@@ -1,75 +1,52 @@
-# TODO: Replace with the name of the repo
+# 2024-phenotypeomat
 
 [![run with conda](http://img.shields.io/badge/run%20with-conda-3EB049?labelColor=000000&logo=anaconda)](https://docs.conda.io/projects/miniconda/en/latest/)
 
-Note: Analysis repo names should be prefixed with the year (ie `2024-noveltree-analysis`)
-
 ## Purpose
 
-TODO: Briefly describe the core analyses performed in the repository and the motivation behind them.
+This repository contains the analysis code to create the data driven components of the figures in our pub [The phenotype-o-mat: A flexible tool for collecting visual phenotypes](LINK_TO_PUB)<br>
+These scripts are intended to provide examples of how an experimenter might analyze data collected on the Phenotype-o-mat.<br>
+A comprehensive protocol for assembling a Phenotype-o-mat is available [here](https://www.protocols.io/view/building-a-phenotype-o-mat-a-low-cost-diy-plate-re-yxmvm3r3ol3p/v1)<br>
 
 ## Installation and Setup
 
 This repository uses conda to manage software environments and installations. You can find operating system-specific instructions for installing miniconda [here](https://docs.conda.io/projects/miniconda/en/latest/). After installing conda and [mamba](https://mamba.readthedocs.io/en/latest/), run the following command to create the pipeline run environment.
 
 ```{bash}
-TODO: Replace <NAME> with the name of your environment
-mamba env create -n <NAME> --file envs/dev.yml
-conda activate <NAME>
+mamba env create -n phenotypeomat-analysis --file envs/dev.yml
+conda activate phenotypeomat-analysis
 ```
 
-**Tips for Developers**
+After setting up the conda environment, the analyses can be run as follows:
 
-You can use the following command to export your current conda environment to a `yml` file.  
-This command will only export the packages that you have installed directly, not the ones that were installed as dependencies. When you're ready to share, please delete this section.
+`python3 colony_segment_figure_chr_fl_fig.py [PATH TO SINGLE C. REINHARDTII TIFF] [PATH TO SINGLE C. SMITHII TIFF]`
 
-```{bash}
-conda env export --from-history --no-builds > envs/dev.yml
-```
+`python3 parent_strains_reflectance_fig.py [PATH TO FOLDER CONTAINING IMAGES]`
 
 ## Data
 
-TODO: Add details about the description of input / output data and links to Zenodo depositions, if applicable.
+The data analyzed for the pub are available [here](PATH TO ZENODO LIB)
 
 ## Overview
 
 ### Description of the folder structure
 
+The analysis scripts are located in the [`data_analysis_scripts`](./data_analysis_scripts) folder.<br>
+The dev.yml file defines the conda envionrment to run the scripts and is contained in the `env` folder.
+
 ### Methods
 
-TODO: Include a brief, step-wise overview of analyses performed.
-
-> Example:
->
-> 1.  Download scripts using `download.ipynb`.
-> 2.  Preprocess using `./preprocessing.sh -a data/`
-> 3.  Run Snakemake pipeline `snakemake --snakefile Snakefile`
-> 4.  Generate figures using `pub/make_figures.ipynb`.
+These two scripts analyze and plot two types of data collected using the phenotypeomat: chlorophyll fluorescence data and multi-wavelength reflectance data.<br>
+Each script starts by taking a single image (flurescence or transillumination) and identifying colony location and shape. These segmentations are then used to collect the remaining intensity data (fluorescence or reflectance) and plot that data. The details of those plots can be seen in the pub or by running the scripts.
 
 ### Compute Specifications
+The computer used to run these analyses:
+CPU: i7-1260P
+RAM: 32GB
+Operating system: Ubuntu 22.04.4
 
-TODO: Describe what compute resources were used to run the analysis. For example, you could list the operating system, number of cores, RAM, and storage space.
+These aren't complex analyses so any computer should work
 
 ## Contributing
 
 See how we recognize [feedback and contributions to our code](https://github.com/Arcadia-Science/arcadia-software-handbook/blob/main/guides-and-standards/guide-credit-for-contributions.md).
-
----
-## For Developers
-
-This section contains information for developers who are working off of this template. Please delete this section when you're ready to share your repository.
-
-### GitHub templates
-This template uses GitHub templates to provide checklists when making new pull requests. These templates are stored in the [.github/](./.github/) directory.
-
-### VSCode
-This template includes recommendations to VSCode users for extensions, particularly the `ruff` linter. These recommendations are stored in `.vscode/extensions.json`. When you open the repository in VSCode, you should see a prompt to install the recommended extensions. 
-
-### `.gitignore`
-This template uses a `.gitignore` file to prevent certain files from being committed to the repository.
-
-### `pyproject.toml`
-`pyproject.toml` is a configuration file to specify your project's metadata and to set the behavior of other tools such as linters, type checkers etc. You can learn more [here](https://packaging.python.org/en/latest/guides/writing-pyproject-toml/)
-
-### Linting
-This template automates linting and formatting using GitHub Actions and the `ruff` linter. When you push changes to your repository, GitHub will automatically run the linter and report any errors, blocking merges until they are resolved.
